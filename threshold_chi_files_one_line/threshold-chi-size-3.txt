@@ -1,0 +1,1 @@
+{},{sensor_2},{sensor_6,sensor_7}

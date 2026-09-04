@@ -1,0 +1,12 @@
+b&c -> a.
+c&d -> a.
+b&d -> a.
+a&c -> b.
+a&d -> b.
+c&d -> b.
+a&b -> c.
+a&d -> c.
+b&d -> c.
+a&b -> d.
+a&c -> d.
+b&c -> d.
