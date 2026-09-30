@@ -42,6 +42,9 @@ for chi_size in chi_sizes:
         for s in new_chi:
             sensors = ",".join(f"sensor_{x}" for x in sorted(s))
             chi_strings.append(f"{{{sensors}}}")
+
+        # Join all chi elements with newlines and trailing commas
+        #f.write(",\n".join(chi_strings) + "\n")
         # Join all chi elements with spaces
         f.write(",".join(chi_strings) + "\n")
     

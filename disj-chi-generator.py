@@ -1,4 +1,4 @@
-# Generates chi files for disjunctive propagation
+# Generates chi files for program "disjunctive propagation"
 
 import os
 import random
@@ -51,7 +51,9 @@ for chi_size in chi_sizes:
             chi_strings.append(f"{{{atoms_str}}}")
 
         # Join all chi elements with newlines and trailing commas
-        f.write(",\n".join(chi_strings) + "\n")
+        #f.write(",\n".join(chi_strings) + "\n")
+        # Join all chi elements with spaces
+        f.write(",".join(chi_strings) + "\n")
 
     # Update current_chi for next iteration
     current_chi = new_chi
