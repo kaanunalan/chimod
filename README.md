@@ -3,18 +3,14 @@
 `chimod` computes the **χ-models** of a propositional answer set program and uses them to decide
 **χ-equivalence**: whether two programs have the same answer sets for every input fact set in a
 given collection χ. It is the prototype accompanying the paper
-*Model-Theoretic Characterization of Programs under Specific Inputs* to appear in the Proceedings of the 18th International Conference on Logic Programming and Non-monotonic Reasoning
+*Model-Theoretic Characterization of Programs under Specific Inputs*, to appear in the Proceedings of the 18th International Conference on Logic Programming and Non-monotonic Reasoning.
 
 - `chimod.py` prints the χ-models of one program.
 - `chieq.py` decides whether two programs are χ-equivalent.
 
-The SE-models (here-and-there models) of a program are computed by the external tool **htmod**, which is located as a 32-bit Linux binary in `htmod/`.
+## Background
 
----
-
-## Background in one paragraph
-
-Let χ ⊆ 2^A be a collection of input fact sets. Programs `P` and `Q` are *χ-equivalent* if
+Let `χ ⊆ 2^A` be a collection of input fact sets. Programs `P` and `Q` are *χ-equivalent* if
 `AS(P ∪ F) = AS(Q ∪ F)` for every `F ∈ χ`. A pair `⟨X, Y⟩` with `X ⊆ Y` is a *χ-model* of `P`
 (Definition 4 of the paper) if:
 
@@ -28,7 +24,6 @@ in χ that fail to produce `Y`. By Theorem 3, **P and Q are χ-equivalent iff th
 coincide**. Special cases: χ = 2^A gives the UE-models, χ = 2^B the relativized B-UE-models, and
 χ = {∅} gives exactly the pairs `⟨Y, Y⟩` with `Y ∈ AS(P)`.
 
----
 
 ## Repository layout
 
@@ -43,7 +38,6 @@ coincide**. Special cases: χ = 2^A gives the UE-models, χ = 2^B the relativize
 | `threshold-chi-generator.py`, `disj-chi-generator.py` | Generate the χ files for the two benchmarks of Section 5. |
 | `threshold_chi_files*/`, `disj_chi_files*/` | Generated χ files, with \|χ\| ∈ {1, 3, 6, …, 30}. The `*_one_line` variants hold the same sets written on a single line. |
 
----
 
 ## Quick start
 
@@ -70,6 +64,8 @@ True
 ## Input formats
 
 ### Programs (htmod syntax)
+
+The SE-models (here-and-there models) of a program are computed by the external tool **htmod**, which is located as a 32-bit Linux binary in `htmod/`.
 
 Both tools expect propositional programs in htmod's syntax. Write one rule per statement, each
 ending with `.`:
@@ -103,7 +99,6 @@ A χ file is a comma-separated list of sets:
 - `{}` is the empty set, i.e. the program without extra facts. It belongs to χ only if it is
   listed.
 
----
 
 ## Usage
 
@@ -124,11 +119,10 @@ python3 chieq.py <program1> <program2> <chi-file>
 
 It prints `True` (χ-equivalent) or `False` (not χ-equivalent).
 
----
 
 ## Additional notes
 
 htmod is included unchanged. The original archive is `htmod/htmod.tar`.
 
 If you use this tool, please cite the paper *Model-Theoretic Characterization of Programs under Specific Inputs*.
-<!-- TODO: add BibTeX once the venue is final. -->
+<!-- TODO: add BibTeX once the proceedings are online -->
