@@ -35,7 +35,7 @@ coincide**. Special cases: χ = 2^A gives the UE-models, χ = 2^B the relativize
 | `htmod/` | The htmod tool: the `htmod` wrapper script, the binaries `lp2dlp`, `boole`, `int`, and the original archive `htmod.tar`. |
 | `htmod/*.lp`, `htmod/ht*` | Example programs in htmod syntax. |
 | `chi*.txt` | χ files for the small examples. |
-| `threshold-chi-generator.py`, `disj-chi-generator.py` | Generate the χ files for the two benchmarks of Section 5. |
+| `threshold-chi-generator.py`, `disj-chi-generator.py` | Generate the χ files for the two benchmarks. |
 | `threshold_chi_files*/`, `disj_chi_files*/` | Generated χ files, with \|χ\| ∈ {1, 3, 6, …, 30}. The `*_one_line` variants hold the same sets written on a single line. |
 
 
