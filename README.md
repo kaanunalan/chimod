@@ -53,14 +53,6 @@ $ python3 chimod.py htmod/mini3.lp chi_mini3.txt
 < { a c e g }, { a c e g } >
 ```
 
-**χ-equivalence check.** Here `P = {a ← ¬b. b ← ¬a. c ← a. c ← b. d ← c,e. e.}` and
-`Q = {a ← ¬b. b ← ¬a. c. d ← c. e.}` under χ = {∅, {a}, {b}}:
-
-```bash
-$ python3 chieq.py htmod/pr1.lp htmod/pr2.lp chi.txt
-True
-```
-
 ## Input formats
 
 ### Programs (htmod syntax)
@@ -109,15 +101,6 @@ python3 chimod.py <program> <chi-file>
 ```
 
 It prints one χ-model per line as `< { X }, { Y } >`.
-
-
-### `chieq.py`: decide χ-equivalence
-
-```
-python3 chieq.py <program1> <program2> <chi-file>
-```
-
-It prints `True` (χ-equivalent) or `False` (not χ-equivalent).
 
 
 ## Additional notes
