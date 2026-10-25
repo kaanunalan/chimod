@@ -3,7 +3,7 @@
 `chimod` computes the **χ-models** of a propositional answer set program and uses them to decide
 **χ-equivalence**: whether two programs have the same answer sets for every input fact set in a
 given collection χ. It is the prototype accompanying the paper
-*Model-Theoretic Characterization of Programs under Specific Inputs*, to appear in the Proceedings of the 18th International Conference on Logic Programming and Non-monotonic Reasoning.
+*Model-Theoretic Characterization of Programs under Specific Inputs*, published in the Proceedings of the 18th International Conference on Logic Programming and Non-monotonic Reasoning.
 
 - `chimod.py` prints the χ-models of one program.
 - `chieq.py` decides whether two programs are χ-equivalent.
