@@ -14,15 +14,13 @@ Let `χ ⊆ 2^A` be a collection of input fact sets. Programs `P` and `Q` are *�
 `AS(P ∪ F) = AS(Q ∪ F)` for every `F ∈ χ`. A pair `⟨X, Y⟩` with `X ⊆ Y` is a *χ-model* of `P`
 (Definition 4 of the paper) if:
 
-1. `Y ⊨ P`;
-2. `Y` is an answer set of `P ∪ X*` for some `X* ∈ χ` with `X* ⊆ Y`;
-3. if `X ⊂ Y`, then `X ∈ χ`, `Y` is *not* an answer set of `P ∪ X`, and every `X'' ∈ χ` with
-   `X ⊂ X'' ⊆ Y` has `Y ∈ AS(P ∪ X'')`.
+(i) Y ⊨ P;
+(ii) there exists X\* ∈ χ with X\* ⊆ Y such that for each X′ with X\* ⊆ X′ ⊂ Y, X′ ⊭ P<sup>Y</sup>;
+(iii) if X ⊂ Y, then X ∈ χ and
+     (1) there exists X′ with X ⊆ X′ ⊂ Y such that X′ ⊨ P<sup>Y</sup>; and
+     (2) for each such X′ (with X ⊆ X′ ⊂ Y such that X′ ⊨ P<sup>Y</sup>), it holds that for all X″ with X ⊂ X″ ⊆ X′, X″ ∉ χ.
 
-Put differently, for each candidate answer set `Y`, the non-total χ-models list the maximal inputs
-in χ that fail to produce `Y`. By Theorem 3, **P and Q are χ-equivalent iff their χ-models
-coincide**. Special cases: χ = 2^A gives the UE-models, χ = 2^B the relativized B-UE-models, and
-χ = {∅} gives exactly the pairs `⟨Y, Y⟩` with `Y ∈ AS(P)`.
+We denote the set of all χ-models of a program P with UE<sub>χ</sub>(P).
 
 
 ## Repository layout
@@ -47,7 +45,7 @@ All commands are run from the repository root. Paths are relative to the current
 `e ← a. c ← a. g ← a. f ∨ a ← e. f ∨ a ← g.` with χ = {{a}, {e}, {g}}:
 
 ```bash
-$ python3 chimod.py htmod/mini3.lp chi_mini3.txt
+$ python3 chimod.py mini3.lp chi_mini3.txt
 < { e f }, { e f } >
 < { f g }, { f g } >
 < { a c e g }, { a c e g } >
