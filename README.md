@@ -14,13 +14,14 @@ Let `χ ⊆ 2^A` be a collection of input fact sets. Programs `P` and `Q` are *�
 `AS(P ∪ F) = AS(Q ∪ F)` for every `F ∈ χ`. A pair `⟨X, Y⟩` with `X ⊆ Y` is a *χ-model* of `P`
 (Definition 4 of the paper) if:
 
-(i) Y ⊨ P;
-(ii) there exists X\* ∈ χ with X\* ⊆ Y such that for each X′ with X\* ⊆ X′ ⊂ Y, X′ ⊭ P<sup>Y</sup>;
-(iii) if X ⊂ Y, then X ∈ χ and
-     (1) there exists X′ with X ⊆ X′ ⊂ Y such that X′ ⊨ P<sup>Y</sup>; and
-     (2) for each such X′ (with X ⊆ X′ ⊂ Y such that X′ ⊨ P<sup>Y</sup>), it holds that for all X″ with X ⊂ X″ ⊆ X′, X″ ∉ χ.
+- (i) `Y ⊨ P`;
+- (ii) there exists `X* ∈ χ` with `X* ⊆ Y` such that for each `X′` with `X* ⊆ X′ ⊂ Y`, `X′ ⊭ P^Y`;
+- (iii) if `X ⊂ Y`, then `X ∈ χ` and
+  - (1) there exists `X′` with `X ⊆ X′ ⊂ Y` such that `X′ ⊨ P^Y`; and
+  - (2) for each such `X′` (with `X ⊆ X′ ⊂ Y` such that `X′ ⊨ P^Y`), it holds that for all `X″`
+    with `X ⊂ X″ ⊆ X′`, `X″ ∉ χ`.
 
-We denote the set of all χ-models of a program P with UE<sub>χ</sub>(P).
+We denote the set of all χ-models of a program `P` with `UE_χ(P)`.
 
 
 ## Repository layout
